@@ -20,10 +20,21 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * Material typograpy - N
 * browser animations - Y
 
->ng g c auth/signup -m=app.module
->ng g c auth/login -m=app.module
->ng g c training -m=app.module
->ng g c training/current-training -m=app.module
->ng g c training/new-training -m=app.module
->ng g c training/past-trainings -m=app.module
->ng g c welcome -m=app.module
+* ng g c auth/signup -m=app.module
+* ng g c auth/login -m=app.module
+* ng g c training -m=app.module
+* ng g c training/current-training -m=app.module
+* ng g c training/new-training -m=app.module
+* ng g c training/past-trainings -m=app.module
+* ng g c welcome -m=app.module
+
+* create app-routing.module.ts for simplest routing for now
+* ng g m app-routing --flat --module=app
+
+* npm i -s @angular/flex-layout @angular/cdk
+* npm i moment
+* npm i @angular/material-moment-adapter
+
+
+next: 13. Implementing Hints and Validation Errors (on Forms)
+next 15. Restricting Pickable Dates
