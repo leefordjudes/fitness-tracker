@@ -35,6 +35,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * npm i moment
 * npm i @angular/material-moment-adapter
 
+* ng g c navigation/header --module=app.module
+
 
 next: 13. Implementing Hints and Validation Errors (on Forms)
 next 15. Restricting Pickable Dates

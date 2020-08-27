@@ -5,7 +5,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 import {
   MAT_MOMENT_DATE_FORMATS,
   MomentDateAdapter,
@@ -21,6 +24,9 @@ const MaterialComponents = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatCheckboxModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatListModule,
 ];  
 
 export const MY_FORMATS = {
