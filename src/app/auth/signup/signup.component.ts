@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import * as moment from 'moment';
+import {AuthService} from '../auth.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -8,7 +9,7 @@ import * as moment from 'moment';
 })
 export class SignupComponent implements OnInit {
   maxDate;
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     const today = new Date();
@@ -20,6 +21,10 @@ export class SignupComponent implements OnInit {
     console.log(form);
     console.log(moment(dob).format('DD-MM-YYYY'));
     console.log(moment(dob).format('DD-MMM-YYYY'));
+    this.authService.registerUser({
+      email: form.value.email,
+      password: form.value.password
+    });
   }
 
 }
