@@ -11,7 +11,7 @@ export class TrainingService {
     { id: 'crunches', name: 'Crunches', duration: 10, calories: 8 },
     { id: 'touch-toes', name: 'Touch Toes', duration: 20, calories: 15 },
     { id: 'side-lunges', name: 'Side Lunges', duration: 30, calories: 18 },
-    { id: 'burpees', name: 'Burpees', duration: 15, calories: 8 }
+    { id: 'burpees', name: 'Burpees', duration: 15, calories: 12 }
   ];
 
   private runningExercise: Exercise;
