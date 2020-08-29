@@ -4,6 +4,10 @@ a {
 }
 a:hover,
 a:active {
-  color: lightgray;
+  color: rgb(152, 162, 250);
 
+  mat-icon,
+  span {
+    color: black;
+  }
 }
