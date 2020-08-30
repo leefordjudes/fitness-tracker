@@ -28,4 +28,4 @@
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
-<mat-paginator #paginator [pageSize]="1" [pageSizeOptions]="[3, 5, 7]" showFirstLastButtons></mat-paginator>
+<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[10, 15, 20, 25]" showFirstLastButtons></mat-paginator>
