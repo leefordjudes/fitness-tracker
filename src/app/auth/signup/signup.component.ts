@@ -18,9 +18,9 @@ export class SignupComponent implements OnInit {
 
   onSubmit(form: NgForm){
     const dob = form.value.dob;
-    console.log(form);
-    console.log(moment(dob).format('DD-MM-YYYY'));
-    console.log(moment(dob).format('DD-MMM-YYYY'));
+    // console.log(form);
+    // console.log(moment(dob).format('DD-MM-YYYY'));
+    // console.log(moment(dob).format('DD-MMM-YYYY'));
     this.authService.registerUser({
       email: form.value.email,
       password: form.value.password

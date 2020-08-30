@@ -37,6 +37,38 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 * ng g c navigation/header --module=app.module
 
+* [x] ng add @angular/fire
+* Register app in firebase console
+* name: afb-fitness-tracker
+gives this
+
+/*
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+*/
+
+/*
+install firebase cli
+npm install -g firebase-tools
+*/
+
+/*
+deploy to firebase hosting
+
+$ firebase login
+$ firebase init
+$ firebase deploy
+*/
+
+* add firebaseConfig in environment.ts file
+
 
 next: 13. Implementing Hints and Validation Errors (on Forms)
 next 15. Restricting Pickable Dates
