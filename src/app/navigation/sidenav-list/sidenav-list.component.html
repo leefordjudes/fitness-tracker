@@ -1,6 +1,6 @@
 <mat-nav-list>
   <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!isAuth">
-    <mat-icon matListIcon>face</mat-icon>
+    <mat-icon matListIcon>article</mat-icon>
     <span>Signup</span>
   </a>
   <a mat-list-item routerLink="/login" (click)="onClose()" *ngIf="!isAuth">
@@ -8,8 +8,12 @@
     <span>Login</span>
   </a>
   <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="isAuth">
-    <mat-icon matListIcon>fitness_center</mat-icon>
-    <span>Training</span>
+    <mat-icon matListIcon>shopping_cart</mat-icon>
+    <span>Orders</span>
+  </a>
+  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="isAuth">
+    <mat-icon matListIcon>shopping_cart</mat-icon>
+    <span matBadge="8" matBadgePosition="after" matBadgeColor="accent" matBadgeOverlap="false">Cart</span>
   </a>
   <mat-list-item>
     <button mat-icon-button (click)="onLogout()" *ngIf="isAuth" style="width: 100%;" fxLayoutAlign="flex-start">

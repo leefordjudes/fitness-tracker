@@ -69,6 +69,5 @@ $ firebase deploy
 
 * add firebaseConfig in environment.ts file
 
-
-next: 13. Implementing Hints and Validation Errors (on Forms)
-next 15. Restricting Pickable Dates
+next 6. Improving Error Handling
+next 11. Splitting Up Routes
