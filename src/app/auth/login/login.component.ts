@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UIService } from '../../shared/ui.service';
 
 
 @Component({
@@ -10,9 +11,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private authService: AuthService) { }
+  isLoading = false;
+  constructor(private authService: AuthService, private uiService: UIService) { }
 
   ngOnInit(): void {
+    this.uiService.loadingStateChanged.subscribe((status) => {
+      this.isLoading = status;
+    });
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),

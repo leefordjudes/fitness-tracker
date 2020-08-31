@@ -15,6 +15,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarConfig} from '@angular/material/snack-bar';
+import {MatBadgeModule} from '@angular/material/badge';
 import {
   MAT_MOMENT_DATE_FORMATS,
   MomentDateAdapter,
@@ -43,6 +45,8 @@ const MaterialComponents = [
   MatTableModule,
   MatSortModule,
   MatPaginatorModule,
+  MatSnackBarModule,
+  MatBadgeModule,
 ];  
 
 export const MY_FORMATS = {
@@ -57,6 +61,10 @@ export const MY_FORMATS = {
   },
 };
 
+let config = new MatSnackBarConfig();
+config.duration = 10000;
+config.panelClass = ["background-color: fuchsia !important;"];
+
 @NgModule({
   imports: [MaterialComponents],
   exports: [MaterialComponents],
@@ -69,7 +77,8 @@ export const MY_FORMATS = {
     },
     // {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS}, // shows only dd/yy/yyyy format
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},  // used for dd-mmm-yyyy format
-    {provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true}} // use only it needs utc
+    {provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true}}, // use only it needs utc
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 10000}}
   ],
 })
 export class MaterialModule {

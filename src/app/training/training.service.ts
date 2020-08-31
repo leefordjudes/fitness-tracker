@@ -3,6 +3,7 @@ import {Subject, Subscription} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Exercise} from './exercise.model';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { UIService } from '../shared/ui.service';
 
 
 @Injectable({providedIn: 'root'})
@@ -12,7 +13,8 @@ export class TrainingService implements OnDestroy {
   private finishedExercises: Exercise[] = [];
   private availableExercises: Exercise[] = [];
   private fbSubs: Subscription[] = [];
-  constructor(private db: AngularFirestore) {}
+
+  constructor(private db: AngularFirestore, private uiService: UIService) {}
   
   private exerciseChanged = new Subject<Exercise>();
   exerciseChanged$ = this.exerciseChanged.asObservable();
@@ -35,9 +37,11 @@ export class TrainingService implements OnDestroy {
   }
 
   fetchAvailableExercises() {
+    this.uiService.loadingStateChanged.emit(true);
     this.fbSubs.push(this.db.collection('availableExercises').snapshotChanges()
     .pipe(
       map(docArray => {
+        // throw new Error();
         return docArray.map(doc => ({
           id: doc.payload.doc.id,
           name: doc.payload.doc.data()['name'],
@@ -48,8 +52,14 @@ export class TrainingService implements OnDestroy {
     ).subscribe((exercises: Exercise[])=>{
       this.availableExercises = exercises;
       this.exercisesChanged.next([...this.availableExercises]);
-    })
-    );
+      this.uiService.loadingStateChanged.emit(false);
+    },
+    error => {
+      this.uiService.loadingStateChanged.emit(false);
+      this.uiService.showSnackbar('Fetching Exercises failed, please try again later', null, 10000);
+      this.exercisesChanged.next(null);
+    }
+    ));
     // return this.availableExercises.slice();
   }
 
