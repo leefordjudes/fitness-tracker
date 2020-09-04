@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {StoreModule} from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
@@ -20,6 +21,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 import { environment } from '../environments/environment';
+import {reducers} from './app.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { environment } from '../environments/environment';
     AngularFirestoreModule,
     // TrainingModule,
     AuthModule,
+    StoreModule.forRoot(reducers),
   ],
   providers: [],
   bootstrap: [AppComponent],
