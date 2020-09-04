@@ -69,5 +69,6 @@ $ firebase deploy
 
 * add firebaseConfig in environment.ts file
 
-next 6. Improving Error Handling
-next 11. Splitting Up Routes
+* npm install @ngrx/store --save
+     or
+* ng add @ngrx/store@latest
