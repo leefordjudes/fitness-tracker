@@ -13,7 +13,6 @@ import {StoreModule} from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
-// import { TrainingModule } from './training/training.module';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -40,7 +39,6 @@ import {reducers} from './app.reducer';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    // TrainingModule,
     AuthModule,
     StoreModule.forRoot(reducers),
   ],

@@ -1,4 +1,4 @@
-import {Action, createFeatureSelector, createSelector} from '@ngrx/store';
+import {createFeatureSelector, createSelector} from '@ngrx/store';
 
 import { TrainingActions, START_TRAINING, STOP_TRAINING, SET_AVAILABLE_TRAININGS, SET_FINISHED_TRAININGS } from './training.actions';
 import * as fromRoot from '../app.reducer';

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {Store, StoreModule} from '@ngrx/store';
+import {StoreModule} from '@ngrx/store';
 
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SharedModule } from '../shared/shared.module';
