@@ -8,12 +8,8 @@
     <span>Login</span>
   </a>
   <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="(isAuth$ | async)">
-    <mat-icon matListIcon>shopping_cart</mat-icon>
-    <span>Orders</span>
-  </a>
-  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="(isAuth$ | async)">
-    <mat-icon matListIcon>shopping_cart</mat-icon>
-    <span matBadge="8" matBadgePosition="after" matBadgeColor="accent" matBadgeOverlap="false">Cart</span>
+    <mat-icon matListIcon>fitness_center</mat-icon>
+    <span matBadge="8" matBadgePosition="after" matBadgeColor="accent" matBadgeOverlap="false">Training</span>
   </a>
   <mat-list-item>
     <button mat-icon-button (click)="onLogout()" *ngIf="(isAuth$ | async)" style="width: 100%;" fxLayoutAlign="flex-start">
