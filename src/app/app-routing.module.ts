@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {AuthGuard} from './auth/auth.guard';
 import { WelcomeComponent } from './welcome/welcome.component';
-// import { TrainingComponent } from './training/training.component';
 import {SignupComponent} from './auth/signup/signup.component';
 import {LoginComponent} from './auth/login/login.component';
 
@@ -17,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./training/training.module').then(m => m.TrainingModule),
     canLoad: [AuthGuard],
   },
-  // { path: 'training', 
-  //   component: TrainingComponent,
-  //   canActivate: [AuthGuard],
-  // },
   { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

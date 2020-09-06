@@ -72,3 +72,5 @@ $ firebase deploy
 * npm install @ngrx/store --save
      or
 * ng add @ngrx/store@latest
+
+* cleanup branch created
