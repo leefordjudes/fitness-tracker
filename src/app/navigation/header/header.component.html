@@ -4,13 +4,12 @@
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <div class="logo"><a routerLink="/"><img src='assets/image/cake-24-logo.png'/>SFC Bakery</a></div>
+  <div class="logo"><a routerLink="/"><img src='assets/image/fitness-24.png'/>Fitness Tracker</a></div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="navigation-items">
       <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup" mat-stroked-button>Signup</a></li>
       <li *ngIf="!(isAuth$ | async)"><a routerLink="/login" mat-stroked-button>Login</a></li>
-      <li *ngIf="(isAuth$ | async)"><a routerLink="/training" mat-stroked-button>Orders</a></li>
-      <li *ngIf="(isAuth$ | async)"><a routerLink="/training" mat-stroked-button matBadge="8" matBadgePosition="after" matBadgeColor="accent" matBadgeOverlap="true">Cart</a></li>
+      <li *ngIf="(isAuth$ | async)"><a routerLink="/training" mat-stroked-button matBadge="8" matBadgePosition="after" matBadgeColor="accent" matBadgeOverlap="true">Training</a></li>
       <li *ngIf="(isAuth$ | async)">
         <a style="cursor: pointer;" (click)="onLogout()" mat-stroked-button>Logout</a>
       </li>

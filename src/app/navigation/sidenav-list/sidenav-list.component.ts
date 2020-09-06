@@ -16,6 +16,7 @@ export class SidenavListComponent implements OnInit {
   // isAuth: boolean = false;
   isAuth$: Observable<boolean>;
   authSubscription: Subscription;
+  availableExercises$: Observable<number>;
   constructor(private authService: AuthService, private store: Store<fromRoot.State>) { }
   
 
