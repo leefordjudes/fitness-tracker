@@ -9,7 +9,7 @@ import { AuthService } from './auth/auth.service';
 export class AppComponent implements OnInit {
 
   openSidenav = false;
-  title = 'fitness-tracker';
+  title = 'SFC Bakery';
 
   constructor(private authService: AuthService){}
 

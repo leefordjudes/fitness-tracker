@@ -1,22 +1,22 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!isAuth">
+  <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!(isAuth$ | async)">
     <mat-icon matListIcon>article</mat-icon>
     <span>Signup</span>
   </a>
-  <a mat-list-item routerLink="/login" (click)="onClose()" *ngIf="!isAuth">
+  <a mat-list-item routerLink="/login" (click)="onClose()" *ngIf="!(isAuth$ | async)">
     <mat-icon matListIcon>login</mat-icon>
     <span>Login</span>
   </a>
-  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="isAuth">
+  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="(isAuth$ | async)">
     <mat-icon matListIcon>shopping_cart</mat-icon>
     <span>Orders</span>
   </a>
-  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="isAuth">
+  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="(isAuth$ | async)">
     <mat-icon matListIcon>shopping_cart</mat-icon>
     <span matBadge="8" matBadgePosition="after" matBadgeColor="accent" matBadgeOverlap="false">Cart</span>
   </a>
   <mat-list-item>
-    <button mat-icon-button (click)="onLogout()" *ngIf="isAuth" style="width: 100%;" fxLayoutAlign="flex-start">
+    <button mat-icon-button (click)="onLogout()" *ngIf="(isAuth$ | async)" style="width: 100%;" fxLayoutAlign="flex-start">
       <mat-icon matListIcon>logout</mat-icon>
       <span>Logout</span>
     </button>
