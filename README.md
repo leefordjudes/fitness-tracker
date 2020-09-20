@@ -74,3 +74,20 @@ $ firebase deploy
 * ng add @ngrx/store@latest
 
 * cleanup branch created
+
+To Deploy 
+
+* npm install -g firebase-tools
+
+* firebase login / logout
+
+* firebase init
+
+     it will ask many questions:
+          1. select project: afb-fitness-tracker
+          2. directory to publish (and make it public): give the relative path of dist/fitness-tracker folder
+               dont overwrite the index.html, use as it is.
+* firebase deploy
+
+
+* firebase deploy
